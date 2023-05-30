@@ -79,7 +79,7 @@ const configuration = {
 }
 
 // Create the main dialog.
-const myBot = new DentaBot(configuration, {});
+const myBot = new DentaBot();
 
 // Listen for incoming requests.
 server.post('/api/messages', (req, res) => {

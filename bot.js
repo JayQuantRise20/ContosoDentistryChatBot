@@ -11,7 +11,7 @@ class DentaBot extends ActivityHandler {
     constructor(configuration, qnaOptions) {
         // call the parent constructor
         super();
-        if (!configuration) throw new Error('[QnaMakerBot]: Missing parameter. configuration is required');
+        //if (!configuration) throw new Error('[QnaMakerBot]: Missing parameter. configuration is required');
 
         // create a QnAMaker connector
         this.QnAMaker = new QnAMaker()
