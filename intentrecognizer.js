@@ -33,7 +33,6 @@ class IntentRecognizer {
             };
             
             
-            //this.recognizer = new LuisRecognizer(config, recognizerOptions);
         }
     }
 
