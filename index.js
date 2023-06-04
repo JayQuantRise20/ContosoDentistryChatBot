@@ -57,7 +57,6 @@ adapter.onTurnError = onTurnErrorHandler;
 
 // Map configuration values values from .env file into the required format for each service.
 const QnAConfiguration = {
-    knowledgeBaseId: process.env.QnAKnowledgebaseId,
     endpointKey: process.env.QnAAuthKey,
     host: process.env.QnAEndpointHostName
 };
@@ -68,6 +67,14 @@ const LuisConfiguration = {
     endpoint: process.env.LuisAPIHostName,
 }
 
+const CLUConfiguration = {
+    CluEndpoint:process.env.LuisAPIHostName,
+    CluSubscriptionKey:process.env.LuisAPIKey,
+    CluProjectName:process.env.ProjectName,
+    CluDeploymentName:process.env.ModelName
+    
+}
+
 const SchedulerConfiguration = {
     SchedulerEndpoint: process.env.SchedulerEndpoint
 }
@@ -75,11 +82,12 @@ const SchedulerConfiguration = {
 const configuration = {
     QnAConfiguration,
     LuisConfiguration,
-    SchedulerConfiguration
+    SchedulerConfiguration,
+    CLUConfiguration
 }
 
 // Create the main dialog.
-const myBot = new DentaBot();
+const myBot = new DentaBot(configuration);
 
 // Listen for incoming requests.
 server.post('/api/messages', (req, res) => {
