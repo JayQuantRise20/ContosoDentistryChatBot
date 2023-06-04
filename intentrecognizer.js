@@ -45,10 +45,12 @@ class IntentRecognizer {
      * @param {TurnContext} context
      */
     async executeLuisQuery(context) {
-
+    // replace with incoming context
     this.body.analysisInput.conversationItem.text=context.activity.text
 
     const {result} = await this.recognizer.analyzeConversation(this.body);
+
+    console.log(result.prediction)
 
     return  result;
     }

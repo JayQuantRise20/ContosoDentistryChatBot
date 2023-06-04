@@ -35,7 +35,7 @@ class DentaBot extends ActivityHandler {
             
             // if(top intent is intentA and confidence greater than 50){
             if (LuisResult.prediction.topIntent === "GetAvailability" && 
-            LuisResult.prediction.intents[0].confidence>0.5 ){
+            LuisResult.prediction.intents[0].confidence>0.5 && LuisResult.prediction.entities[0]){
 
                 const  available_slots = await this.DentistScheduler.getAvailability();
 
