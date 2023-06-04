@@ -31,8 +31,7 @@ class IntentRecognizer {
                       deploymentName: config.CluDeploymentName
                     },
             };
-            
-            
+        
         }
     }
 
