@@ -62,7 +62,6 @@ const QnAConfiguration = {
 };
 
 const LuisConfiguration = {
-    applicationId: process.env.LuisAppId,
     endpointKey: process.env.LuisAPIKey,
     endpoint: process.env.LuisAPIHostName,
 }
